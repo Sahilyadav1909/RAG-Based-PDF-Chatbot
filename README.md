@@ -1,4 +1,4 @@
-# 🤖 DocuMind AI: Context-Aware PDF Chatbot
+# 🤖 RAG-Based PDF Chatbot
 
 A professional-grade **RAG (Retrieval-Augmented Generation)** application that allows users to upload PDF documents and have natural conversations with them. Built with a decoupled architecture using **FastAPI** for the heavy lifting and **Streamlit** for a sleek user interface.
 
