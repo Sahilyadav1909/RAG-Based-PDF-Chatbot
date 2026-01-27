@@ -1,0 +1,13 @@
+venv/
+.env
+
+.git
+.gitignore
+
+**/__pycache__/
+
+docker-compose.yml
+README.md
+
+backend/vectore_db/
+backend/uploaded_pdfs/
