@@ -20,7 +20,6 @@ def rag_chat(question: str, user_id: str):
     """
     prompt = ChatPromptTemplate.from_template(template)
 
-    # LCEL "Pipe" Chain
     chain = (
         {"context": retriever, "question": RunnablePassthrough()}
         | prompt

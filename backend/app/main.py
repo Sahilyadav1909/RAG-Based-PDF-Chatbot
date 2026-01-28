@@ -7,7 +7,6 @@ from .ingest import ingest_pdf
 
 app = FastAPI()
 
-# FIX: Allows Streamlit to communicate with FastAPI
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

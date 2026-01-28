@@ -1,6 +1,5 @@
 from langchain_core.messages import HumanMessage, AIMessage
 
-# For production/100+ users, replace this dict with a Redis client
 chat_store = {}
 
 def get_history(session_id: str):

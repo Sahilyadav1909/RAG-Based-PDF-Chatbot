@@ -5,7 +5,6 @@ from .vectorstore import get_vectorstore
 def ingest_pdf(pdf_path: str, user_id: str):
     vectorstore = get_vectorstore()
 
-    # Faster loading than PDFPlumber
     loader = PyMuPDFLoader(pdf_path)
     documents = loader.load()
 

@@ -3,7 +3,6 @@ import requests
 import uuid
 import os
 
-# Render will provide this URL once the backend is deployed
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="AI Chatbot", layout="wide")
@@ -24,7 +23,6 @@ with st.sidebar:
         if "last_file" not in st.session_state or st.session_state.last_file != uploaded_file.name:
             with st.spinner("Uploading..."):
                 files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
-                # Use session_id for user isolation in vectorstore
                 res = requests.post(f"{BACKEND_URL}/upload-pdf", files=files, params={"user_id": st.session_state.session_id})
                 if res.status_code == 200:
                     st.session_state.pdf_ready = True
